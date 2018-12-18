@@ -1,0 +1,25 @@
+/*C1*/SET SCHEMA SYSTEM_LOBS
+INSERT INTO BLOCKS VALUES(0,2147483647,0)
+COMMIT
+/*C11*/SET SCHEMA PUBLIC
+create table aluno (id varchar(255) not null, caminho_foto varchar(255), desativado integer not null, endereco varchar(255), id_cliente integer not null, modificacao timestamp, nome varchar(255), nota double, site varchar(255), telefone varchar(255), primary key (id))
+create table dispositivo (token varchar(255) not null, primary key (token))
+create table firebase_config (id bigint not null, url varchar(255), apikey varchar(255), primary key (id))
+INSERT INTO ALUNO VALUES('e6ce716b-bd21-4b1b-ad5f-00ad1b05dc89',NULL,0,'Rua Getulio Vargas, 539 - Birigui',0,'2018-10-16 21:41:19.040000','Teste Api',10.0E0,'google.com','18996492300')
+COMMIT
+DELETE FROM ALUNO WHERE ID='e6ce716b-bd21-4b1b-ad5f-00ad1b05dc89'
+INSERT INTO ALUNO VALUES('e6ce716b-bd21-4b1b-ad5f-00ad1b05dc89',NULL,1,'Rua Getulio Vargas, 539 - Birigui',0,'2018-10-16 21:41:53.792000','Teste Api',10.0E0,'google.com','18996492300')
+COMMIT
+INSERT INTO ALUNO VALUES('11cd25f6-ecc4-41a6-851b-eab413766fc6',NULL,0,'teste',0,'2018-10-16 21:42:38.349000','Teste',10.0E0,'google.com','1899485151511')
+COMMIT
+DELETE FROM ALUNO WHERE ID='11cd25f6-ecc4-41a6-851b-eab413766fc6'
+INSERT INTO ALUNO VALUES('11cd25f6-ecc4-41a6-851b-eab413766fc6',NULL,1,'teste',0,'2018-10-16 21:42:51.754000','Teste',10.0E0,'google.com','1899485151511')
+COMMIT
+INSERT INTO ALUNO VALUES('71ff48fc-ed1a-4329-80ab-38f29c386af4',NULL,0,'teste',0,'2018-10-16 22:21:10.129000','Teste',10.0E0,'google.com','1899485151511')
+COMMIT
+INSERT INTO ALUNO VALUES('ae905bca-0f4d-452a-b529-042beb869cb5',NULL,0,'Rua Vergueiro - Vila Mariana, Sao Paulo',0,'2018-10-16 22:21:11.965000','Mateus Esposito',10.0E0,'www.google.com','5518996492300')
+COMMIT
+INSERT INTO ALUNO VALUES('17bbd7d6-e594-4229-b55f-ef3ed5530fe1',NULL,0,'Rua da luiza',0,'2018-10-16 22:28:52.620000','Luiza',6.0E0,'www.sitedaluiza.com.br','4445445544545')
+COMMIT
+INSERT INTO ALUNO VALUES('9227fffb-de8d-4432-ab1a-b0a0ea6b13b8',NULL,0,'Rua do paulo',0,'2018-10-16 22:31:31.324000','Paulo',10.0E0,'www.sitedopaulo.com.br','1515445544554')
+COMMIT
